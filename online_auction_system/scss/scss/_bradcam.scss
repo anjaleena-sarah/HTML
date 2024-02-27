@@ -1,0 +1,112 @@
+.bradcam_bg_1{
+    background-image: url(../img/banner/bradcam_1.png);
+}
+.bradcam_bg_2{
+    background-image: url(../img/banner/bradcam_2.png);
+}
+.bradcam_bg_3{
+    background-image: url(../img/banner/bradcam_3.png);
+}
+.bradcam_bg_4{
+    background-image: url(../img/banner/details.png);
+}
+
+.bradcam_area{
+    position: relative;
+    z-index: 0;
+    .single_bradcam{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding-bottom: 142px;
+        padding-top: 250px;
+        @media #{$mobile_device} {
+            padding: 150px 0;
+        }
+        @media #{$tablet_device} {
+            padding: 200px 0;
+        }
+        .bradcam_text{
+            position: relative;
+            @media #{$mobile_device}{
+               margin: 0;
+            }
+            .shape_1{
+                position: absolute;
+                bottom:0;
+                right: 0;
+                @media #{$mobile_device} {
+                    width: 100px;
+                    height: 100px;
+                }
+                img{
+                    @media #{$mobile_device}{
+                        width: 100%;
+                    }
+                }
+            }
+            .shape_2{
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                @media #{$mobile_device} {
+                    width: 100px;
+                    height: 100px;
+                }
+                img{
+                    @media #{$mobile_device}{
+                        width: 100%;
+                    }
+                }
+            }
+            span{
+                font-size: 40px;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-family: $font1;
+            }
+            h3{
+            font-family: $font1;
+            font-size: 80px;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1;
+            margin-top: 5px;
+            margin-bottom: 23px;
+            font-family: $font2;
+            position: relative;
+            z-index: 9;
+             span{
+                 font-weight: 700;
+             }
+             @media #{$mobile_device} {
+               font-size: 30px;
+            //    letter-spacing: 3px;
+            line-height: 45px;
+            }
+             @media #{$tablet_device} {
+                font-size: 54px;
+            }
+             @media #{$mid_device} {
+               font-size: 100px;
+            }
+            }
+            p{
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFF;
+                margin-bottom: 34px;
+                margin-top: 10px;
+                font-family: $font2;
+             @media #{$mid_device} {
+                font-size: 16px;
+             }
+             @media #{$mobile_device} {
+                font-size: 16px;
+             }
+            }
+        }
+    } 
+}

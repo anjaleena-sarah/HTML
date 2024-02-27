@@ -1,0 +1,44 @@
+.performar_area{
+    padding-top: 135px;
+    padding-bottom: 63px;
+    @media #{$mobile_device} {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    @media #{$tablet_device} {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .single_performer{
+        margin-bottom: 80px;
+        @media #{$mobile_device} {
+            margin-bottom: 30px;
+        }
+        @media #{$tablet_device} {
+            margin-bottom: 50px;
+        }
+        @media #{$tablet_device} {
+            margin-bottom: 40px;
+        }
+        .thumb{
+            img{
+                width: 100%;
+            }
+        }
+        .performer_heading{
+            margin-top: 35px;
+            h4{
+                font-size: 30px;
+                font-family: $font1;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 14px;
+            }
+            span{
+                color: #FF4533;
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+    }
+}

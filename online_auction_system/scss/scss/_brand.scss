@@ -1,0 +1,11 @@
+
+.brand_area{
+    padding-top: 150px;
+    @media #{$mobile_device} {
+        padding-top: 60px;
+    }
+    .brand_wrap{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 80px;
+    }
+}

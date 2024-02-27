@@ -1,0 +1,62 @@
+.map_area{
+    position: relative;
+    #map{
+        @media #{$mobile_device} {
+           height: 400px !important;
+        }
+    }
+    .location_information{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+        padding: 65px 70px 70px 65px;
+        right: 20%;
+        max-width: 460px;
+        @media #{$mobile_device} {
+            padding: 20px;
+            right: 20px;
+            left: 20px;
+            bottom: 20px;
+        }
+        h3{
+            font-size: 30px;
+            font-weight: 400;
+            color: $theme-color;
+            margin-bottom: 20px;
+        }
+
+        .info_wrap{
+            .single_info{
+                display: flex;
+                margin-bottom: 7px;
+                @media #{$mobile_device} {
+                    display: block;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                span{
+                    font-family: $font3;
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-right: 20px;
+                    color: #AAB1B7;
+                    @media #{$mobile_device} {
+                        font-size: 14px;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    color: #fff;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    display: inline-block;
+                    @media #{$mobile_device} {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
