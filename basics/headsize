@@ -1,0 +1,17 @@
+<HTML>
+<HEAD> <TITLE> Demo Page </TITLE> </HEAD>
+
+<BODY bgcolor = "lavender">
+
+<H1> <I> <center> <marquee scrollamount="30">WELCOME </marquee><center> </I> </H1> 
+<H2> WELCOME </H2><br>
+<H3> <font color = "purple"> WELCOME </font> </H3>
+<H4>  WELCOME </H4>
+<font size = "19"> WELCOME </font>
+<H5> WELCOME To RCSS</H5> 
+<H6> WELCOME </H6>
+<a href = angor.html>Go to Angor Page</a>
+<a href = https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.newindianexpress.com%2Fuploads%2Fuser%2Fimagelibrary%2F2023%2F4%2F11%2Fw900X450%2FMammootty_YouTube.jpg%3Fw%3D400%26dpr%3D2.6&tbnid=N9ZkBny25hTIcM&vet=12ahUKEwiEycK-uPWCAxVFoekKHTi-CzgQMygHegQIARB7..i&imgrefurl=https%3A%2F%2Fwww.newindianexpress.com%2Fentertainment%2Fmalayalam%2F2023%2Fnov%2F21%2Fmammootty-banning-reviews-wont-save-the-film-industry-2634681.html&docid=ykuKZ60RVUa5eM&w=900&h=450&q=mammootty&ved=2ahUKEwiEycK-uPWCAxVFoekKHTi-CzgQMygHegQIARB7>Go to Mamooty Page</a>
+
+</BODY>
+</HTML>
