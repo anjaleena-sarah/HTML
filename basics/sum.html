@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of two numbers</title>
+</head>
+<body>
+    <label>Enter first number</label>
+    <input type="text" id="num1">
+    <label>Enter second number</label>
+    <input type="text" id="num2">
+    <label>Sum is</label>
+    <input type="text" id="num3">
+    <button onclick="sum()">Find</button>
+
+    <script> 
+        function sum() {
+            let a = +document.getElementById("num1").value;
+            let b = +document.getElementById("num2").value;
+            let c = a + b;
+            document.getElementById("num3").value = c; // Set the sum in the third input box
+        }
+    </script>
+
+</body>
+</html>
