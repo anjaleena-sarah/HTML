@@ -1,0 +1,72 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style2.css">
+<title>Document</title>
+</head>
+<body>
+<h1 style="color: rgb(43, 133, 77); text-align: center;">STUDENT APPLICATION FORM</h1>
+<form name="submit-to-google-sheet">
+<input type="image" src= "https://encrypted-
+tbn0.gstatic.com/images?q=tbn:ANd9GcQnlOLIVyohyA2XyUPpl598qXqOtjTHmkW6zX VB_lUBxQ&s"
+alt=" logo" align="right">
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name" value=""><br><br>
+<label for="addr">Address:</label><br>
+<input type="text-area" id="addr" name="addr" value=""><br><br>
+<label for="age">Age:</label><br>
+<input type="number" id="age" name="age" min="0" max="100" value=""><br><br>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<br><br>
+<label for="phno">Phone number:</label><br>
+<input type="text" id="phno" name="phno" value=""><br><br>
+<label for="email">email:</label><br>
+<input type="email" id="email" name="email"><br><br>
+
+<label for="c1"> Course</label>
+<input type="checkbox" id="c1" name="course" value="MCA">
+<label for="c1"> MCA</label>
+<input type="checkbox" id="c2" name="course" value="MScCS">
+<label for="c2"> MScCS</label>
+<input type="checkbox" id="c3" name="course" value="MSW">
+<label for="c3"> MSW</label><br><br>
+<label for="mypic">Select photo:</label>
+<input type="file" id="mypic" name="mypic"><br><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycby3ZXH2c- PuIRpTTYXPG42cHTtLQDyEu6R7XYT4k8EZcQvk2rOgNsEWsfNwqrnMrtrC/exec'
+const form = document.forms['submit-to-google-sheet'] const msg = document.getElementById("msg")
+form.addEventListener('submit', e => { e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => { console.log(response);
+{ alert("SUCCESSFUL!"); }
+form.reset()
+})
+.catch(error => console.error('Error!', error.message))
+})
+</script>
+</body>
+</html>
+
+CSS
+* {
+    box-sizing: border-box;
+    }
+    input[type=text], select, textarea { width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc; border-radius: 4px; resize: vertical;
+    }
+    label {
+    padding: 12px 12px 12px 0; display: inline-block;
+    }
+    input[type=submit] { background-color: #04AA6D; color: white;
+    padding: 12px 20px; border: none;
+    border-radius: 4px; cursor: pointer; float: right;
+    }
+    input[type=submit]:hover { background-color: #45a049;
+    }
