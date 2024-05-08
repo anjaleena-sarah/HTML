@@ -1,0 +1,31 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style1.css">
+<title>Horizontal_snap</title>
+</head>
+<body>
+<div class="horizontal-snap">
+<img src="img1.jpg" alt="img">
+<img src="img1.jpg" alt="img">
+<img src="img1.jpg" alt="img">
+<img src="img1.jpg" alt="img">
+<img src="img1.jpg" alt="img">
+</div>
+</body>
+</html>
+
+CSS
+.horizontal-snap { margin: auto;
+    border: solid black 2px; overflow-x: scroll; overflow-y: hidden; white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    }    
+    .horizontal-snap > a { scroll-snap-align: center;
+    }
+    .horizontal-snap img { width: 30%;
+    object-fit: contain; border-radius: 1rem;
+    }
+
