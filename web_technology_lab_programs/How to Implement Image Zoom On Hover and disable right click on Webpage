@@ -1,0 +1,43 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Zoom On Hover</title>
+<style>
+  .container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  .zoom {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  .zoom:hover {
+    transform: scale(1.2); /* Adjust zoom level as needed */
+  }
+</style>
+</head>
+<body>
+<div class="container" oncontextmenu="return false" ondragstart="return false">
+  <img src="https://picsum.photos/id/1/200/300" alt="Image" class="zoom">
+</div>
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+  // Disable drag and drop for images
+  document.addEventListener('dragstart', function(event) {
+    if (event.target.tagName.toLowerCase() === 'img') {
+      event.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
