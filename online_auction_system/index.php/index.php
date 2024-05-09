@@ -1,12 +1,12 @@
 <?php
 
-// Page crÈe par Shepard [Fabian Pijcke] <Shepard8@laposte.net>
+// Page cr√©e par Shepard [Fabian Pijcke] <Shepard8@laposte.net>
 // Arno Esterhuizen <arno.esterhuizen@gmail.com>
 // et Romain Bourdon <rromain@romainbourdon.com>
-// et HervÈ Leclerc <herve.leclerc@alterway.fr>
+// et Herv√© Leclerc <herve.leclerc@alterway.fr>
 //  
-// Mise  ‡ jour par Herve Leclerc herve.leclerc@alterway.fr
-// IcÙnes par Mark James <http://www.famfamfam.com/lab/icons/silk/>
+// Mise  √† jour par Herve Leclerc herve.leclerc@alterway.fr
+// Ic√¥nes par Mark James <http://www.famfamfam.com/lab/icons/silk/>
 
 
 
