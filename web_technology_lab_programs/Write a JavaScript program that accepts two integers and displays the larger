@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Larger Integer</title>
+<script>
+    function findLarger() {
+        // Get input values from the user
+        var num1 = parseInt(prompt("Enter the first integer:"));
+        var num2 = parseInt(prompt("Enter the second integer:"));
+        // Check if both inputs are valid integers
+        if (!isNaN(num1) && !isNaN(num2)) {
+            // Compare the two integers and display the larger one
+            var larger = (num1 > num2) ? num1 : num2;
+            alert("The larger integer is: " + larger);
+        } else {
+            // Display an error message if inputs are not valid integers
+            alert("Please enter valid integers.");
+        }
+    }
+</script>
+</head>
+<body>
+<button onclick="findLarger()">Find Larger Integer</button>
+</body>
+</html>
