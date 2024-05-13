@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Sorting</title>
+<script>
+    function sortNumbers() {
+        var numbers = [5, 2, 9, 1, 7];
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+        document.getElementById("sortedNumbers").innerText = numbers.join(", ");
+    }
+    function sortStrings() {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        document.getElementById("sortedStrings").innerText = fruits.join(", ");
+    }
+</script>
+</head>
+<body>
+<h2>Sort Numbers</h2>
+<button onclick="sortNumbers()">Sort Numbers</button>
+<p>Sorted Numbers: <span id="sortedNumbers"></span></p>
+<h2>Sort Strings</h2>
+<button onclick="sortStrings()">Sort Strings</button>
+<p>Sorted Strings: <span id="sortedStrings"></span></p>
+</body>
+</html>
+
