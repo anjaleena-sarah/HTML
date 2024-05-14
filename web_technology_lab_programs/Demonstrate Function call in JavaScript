@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+Enter value1<input type="number" id="v1"><br> Enter value2<input type="number" id="v2"><br>
+<button onclick="show()">Result</button>
+<p id="result"></p>
+</body>
+<script>
+function sum(a,b)
+{
+let sum = a + b; document.getElementById("result").innerHTML=sum;
+}
+function show(){
+let n1=document.getElementById("v1").value; let n2=document.getElementById("v2").value; sum(n1,n2)
+}
+</script>
+</html>
