@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+Enter a decmail<input type="number" id="dec">
+<br>
+<button onclick="get()">Get Binary</button>
+<p id="binary"></p>
+</body>
+<script>
+function get() {
+let x = document.getElementById("dec").value; let bin = 0;
+let rem, i = 1; while (x != 0) {
+rem = x % 2;
+x = parseInt(x / 2); bin = bin + rem * i; i = i * 10;
+}
+document.getElementById("binary").innerHTML=bin;
+}
+</script>
+</html>
