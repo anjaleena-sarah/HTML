@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+Enter a String<input type="text" id="string"><br>
+<button onclick="getchar()">Get</button>
+<p id="char"></p>
+</body>
+<script>
+function getchar(){
+let string=document.getElementById("string").value; let letter1=string.charAt(0); document.getElementById("char").innerHTML=letter1; if (!isNaN(letter1 * 1)){
+document.getElementById("char").innerHTML="Numberic";
+}
+else {
+if (letter1 == letter1.toUpperCase()) { document.getElementById("char").innerHTML="UpperCase";
+}
+else{
+document.getElementById("char").innerHTML="Not Uppercase";
+}
+}
+}
+</script>
+</html>
