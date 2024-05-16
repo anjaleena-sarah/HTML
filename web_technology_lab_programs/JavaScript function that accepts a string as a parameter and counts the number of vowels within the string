@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Count Vowels</title>
-</head>
+</head> 
 <body>
 <form>
 <label for="inputString">Enter a string:</label>
