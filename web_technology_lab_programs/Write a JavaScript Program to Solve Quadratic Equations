@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadratic Equation Solver</title>
+<style>
+    input[type="text"] 
+   {
+        width: 60px;
+    }
+</style>
+<script>
+    function solveQuadratic() 
+   {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var c = parseFloat(document.getElementById("c").value);
+        // Calculate the discriminant
+        var discriminant = b * b - 4 * a * c;
+        // Initialize variables to store roots
+        var root1, root2;
+
+
+        // Check the nature of the roots based on the discriminant
+        if (discriminant > 0) 
+       {
+            root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            document.getElementById("result").innerHTML = "Root 1: " + root1.toFixed(2) + "<br>Root 2: " + root2.toFixed(2);
+        } 
+        else if (discriminant === 0) 
+       {
+            root1 = -b / (2 * a);
+            document.getElementById("result").innerHTML = "Roots are real and equal: " + root1.toFixed(2);
+        } 
+        else 
+        {
+            var realPart = -b / (2 * a);
+            var imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+            document.getElementById("result").innerHTML = "Root 1: " + realPart.toFixed(2) + " + " + imaginaryPart.toFixed(2) + "i <br>Root 2: " + realPart.toFixed(2) + " - " + imaginaryPart.toFixed(2) + "i";
+        }
+    }
+</script>
+</head>
+<body>
+<h2>Quadratic Equation Solver</h2>
+<p>Enter the coefficients of the quadratic equation (ax<sup>2</sup> + bx + c = 0):</p>
+<input type="text" id="a" placeholder="a"> x<sup>2</sup> +
+<input type="text" id="b" placeholder="b"> x +
+<input type="text" id="c" placeholder="c"> = 0
+<br><br>
+<button onclick="solveQuadratic()">Solve</button>
+<br><br>
+<div id="result"></div>
+</body>
+</html>
