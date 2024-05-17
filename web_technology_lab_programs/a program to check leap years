@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+Enter the year <input type="number" id="year"><br>
+<button onclick="checkLeapYear()">Check</button>
+<div id="result"></div>
+</body>
+<script>
+function isLeapYear(year) {
+return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+}
+function checkLeapYear() {
+let year = document.getElementById("year").value; let isLeap = isLeapYear(year);
+let resultJSON = { "Year": year, "IsLeapYear": isLeap }; document.getElementById("result").innerHTML = JSON.stringify(resultJSON);
+}
+</script>
+</html>
