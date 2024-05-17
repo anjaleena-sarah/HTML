@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+Enter the limit <input type="number" id="limit"><br>
+<button onclick="show()">Show</button>
+<div id="result"></div>
+</body>
+<script>
+function fibonacci(n) { let sequence = [0, 1];
+for (let i = 2; i <= n; i++) { sequence.push(sequence[i - 1] + sequence[i - 2]);
+}
+return sequence;
+}
+function show() 
+{
+let n = document.getElementById("limit").value; let sequence = fibonacci(n);
+
+
+let fibonacciJSON = { "Fibonacci": sequence }; document.getElementById("result").innerHTML =
+JSON.stringify(fibonacciJSON);
+}
+</script>
+</html>
