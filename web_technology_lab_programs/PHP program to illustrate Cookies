@@ -1,0 +1,19 @@
+<?php
+if (isset($_POST['submit'])) 
+{
+    $username = $_POST['username'];
+    setcookie('username', $username, time() + (86400 * 30), "/");
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
+}
+// Check if the cookie is set
+if(isset($_COOKIE['username'])) 
+{
+    $username = $_COOKIE['username'];
+    echo "Welcome back, $username!";
+} 
+else 
+{
+    echo "Welcome, Guest!";
+}
+?>
