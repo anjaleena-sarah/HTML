@@ -7,7 +7,7 @@ if (isset($_POST['submit']))
     exit;
 }
 // Check if the cookie is set
-if(isset($_COOKIE['username'])) 
+if(isset($_COOKIE['username']))  
 {
     $username = $_COOKIE['username'];
     echo "Welcome back, $username!";
