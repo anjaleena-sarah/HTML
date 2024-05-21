@@ -2,7 +2,7 @@
 $globalVar = 10;
 function abc()
 {
-global $globalVar; echo $globalVar;
+ global $globalVar; echo $globalVar;
 }
 abc();
-?>
+?> 
