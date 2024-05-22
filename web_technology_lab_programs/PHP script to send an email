@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<?php require_once "vendor/autoload.php"; use PHPMailer\PHPMailer\PHPMailer; if(isset($_POST['btmsend'])){
+$subject=$_POST["subject"];
+$message=$_POST["message"];
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'sandbox.smtp.mailtrap.io';
+$mail->SMTPAuth = true;
+$mail->Port = 2525;
+$mail->Username = '5337e13122f9ba';
+$mail->Password = '8a62ffb77c40ad';
+$mail->FromName = "Ajay Krishnan"; //To address and name
+$mail->addAddress("recepient1@example.com", "Recepient Name");//Recipient name is optional
+$mail->addAddress("recepient1@example.com"); //Address to which recipient will reply
+$mail->addReplyTo("reply@yourdomain.com", "Reply"); //CC and BCC
+$mail->addCC("cc@example.com");
+$mail->addBCC("bcc@example.com"); //Send HTML or Plain Text email
+$mail->isHTML(true);
+$mail->Subject = $subject;
+$mail->Body = $message;
+$mail->AltBody = "This is the plain text version of the email content"; if(!$mail->send())
+{
+echo "Mailer Error: " . $mail->ErrorInfo;
+}
+else { echo "Message has been sent successfully";
+}
+// if(mail($to,$subject,$message)){
+// echo "<script> alert('Email sened')</script>";
+// }else{
+// echo "<script> alert('Error in sending Email')</script>";
+// }
+}
+?>
+</head>
+<body>
+<form method="post" action="">
+Enter the mail id <input type="email" name="to"><br> Enter the Subject <input type="text" name="subject"><br>
+Enter the Message <input type="text" name="message"><br>
+<input type="submit" name="btmsend">
+</form>
+</body>
+</html>
