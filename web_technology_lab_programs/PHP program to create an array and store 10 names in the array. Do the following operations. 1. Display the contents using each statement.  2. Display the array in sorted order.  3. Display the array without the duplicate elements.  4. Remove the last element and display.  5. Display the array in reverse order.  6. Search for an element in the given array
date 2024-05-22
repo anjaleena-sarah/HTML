@@ -11,7 +11,7 @@ echo "\nRemoved last element: $lastElement\n"; echo "Array after removing last e
 echo "\nArray in reverse order:\n"; print_r(array_reverse($names));
 $searchName = "David";
 $searchIndex = array_search($searchName, $names); if ($searchIndex !== false) {
-echo "\n$searchName found at index $searchIndex\n";
+echo "\n$searchName found at index $searchIndex\n"; 
 } else {
 echo "\n$searchName not found in the array\n";
 } 
