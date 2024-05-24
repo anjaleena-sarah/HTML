@@ -7,7 +7,7 @@ HTML
 <link rel="stylesheet" href="style2.css">
 <title>Document</title>
 </head>
-<body>
+<body> 
 <h1 style="color: rgb(43, 133, 77); text-align: center;">STUDENT APPLICATION FORM</h1>
 <form name="submit-to-google-sheet">
 <input type="image" src= "https://encrypted-
