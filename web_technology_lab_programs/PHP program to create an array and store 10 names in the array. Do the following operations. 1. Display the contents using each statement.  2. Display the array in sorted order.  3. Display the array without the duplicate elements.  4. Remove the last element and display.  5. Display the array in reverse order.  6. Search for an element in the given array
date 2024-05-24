@@ -1,7 +1,7 @@
 <?php
 $names = array("Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack");
 echo "Contents of the array using foreach loop:\n"; foreach ($names as $name) {
-echo $name . "\n";
+echo $name . "\n"; 
 }
 sort($names);
 echo "\nArray in sorted order:\n"; print_r($names);
