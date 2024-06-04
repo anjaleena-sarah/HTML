@@ -1,6 +1,6 @@
 <?php 
 function isleapyear($year) { 
-return ($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0);
+return ($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0); 
 }  
 $year_to_check = 2024;  
 if (isleapyear($year_to_check)) {  
