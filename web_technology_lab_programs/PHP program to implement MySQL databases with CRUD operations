@@ -1,0 +1,169 @@
+Createdatabase.php
+<!-- Create DataBase -->
+<?php
+include 'db.php';
+$createdatabase="CREATE DATABASE mydb"; if($conn->query($createdatabase)==TRUE){ echo "Database created successfully";
+}else {
+echo "Error creating database: " . $conn->error;
+}
+?>
+dbconnection.php
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "mydb";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$database);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected to db successfully";
+?>
+createtable.php
+<?php
+$servername = "localhost";
+
+
+$username = "root"; 
+$password = "";
+$database = "mydb";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$database);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected to db successfully";
+$cretetable="CREATE TABLE tbl_student ( id int(10) UNSIGNED NOT NULL,
+name varchar(30) NOT NULL, rollno int(10) NOT NULL, class varchar(30) NOT NULL
+)" ;
+if($conn->query($cretetable)==TRUE){ echo "<br>table is created";
+}else {
+echo "Error creating database: " . $conn->error;
+}
+?>
+form.php
+<?php
+include 'dbconnection.php';
+if (isset($_POST["submit"])) {
+$insertdata = "insert into tbl_student(name,rollno,class)values('" .
+$_POST["name"] . "','" . $_POST["rollno"] . "','" . $_POST["class"] . "')"; if ($conn->query($insertdata) == TRUE) {
+header("location:form.php");
+} else {
+echo "<script>alert('Not added')</script>";
+echo "Error in adding value : " . $conn->error;}} ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style> table{
+text-align: center;
+} </style></head>
+<body>
+<center>
+<form method="POST">
+<table>
+<tr><th> Name</th>
+<td>
+<input type="text" name="name" ></td></tr>
+<tr><th> Roll no</th>
+<td>
+<input type="number" name="rollno" id="rollno" > </td></tr>
+<tr><th> Claas</th>
+<td>
+<input type="text" name="class">
+</td></tr>
+<tr>
+<td colspan="2">
+<center>
+<input type="submit" name="submit"></center></td></tr>
+</table>
+</form> 
+<table border="1"><tr><th> SI No</th>
+<th> Name</th>
+<th>ROLL No</th>
+<th>Class</th>
+<th colspan="2"> Action</th></tr></center>
+<?php
+$selectdata = "select * from tbl_student";
+
+$result = $conn->query($selectdata);
+$i = 1;
+if ($result->num_rows > 0) {
+while ($row = $result->fetch_assoc()) {
+?>
+<tr>
+<td>
+<?php echo $i;
+$i++;
+?>
+</td>
+<td>
+<?php echo $row["name"] ?>
+</td>
+<td>
+<?php echo $row["rollno"] ?>
+</td>
+<td>
+<?php echo $row["class"] ?>
+</td>
+<td><a href="editform.php?eid=<?php echo $row["id"]
+?>">EDIT</a></td>
+<td><a href="delete.php?did=<?php echo $row["id"]
+?>">DELETE</a></td>
+</tr>
+<?php
+}
+} else {
+?>
+<tr>
+<td colspan="5" align="center">No data Found</td>
+</tr>
+
+<?php
+} ?></table></body></html>
+editform.php
+<?php
+include 'dbconnection.php'; if($_GET["eid"]){
+$selectstu="select * from tbl_student where id='".$_GET["eid"]."'";
+$row = mysqli_fetch_assoc($conn->query($selectstu) );
+}
+if(isset($_POST["submit"]))
+{
+$updatedata = "update tbl_student set name='" . $_POST["name"] . "',rollno='" .
+$_POST["rollno"] . "',class='" . $_POST["class"] . "' where id='" . $_GET["eid"] . "'"; echo $updatedata;
+if ($conn->query($updatedata)) { header("location:form.php");
+} else {
+echo "<script>alert('Error in updating')</script>";}}?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title></head>
+<body>
+<form method="POST">
+<table><tr><td>Name</td>
+<td><input type="text" name="name" value="<?php echo $row["name"]?>"></td></tr>
+<tr><td>RollNo</td>
+<td><input type="text" name="rollno" value="<?php echo $row["rollno"]?>"></td></tr>
+<tr><td>Class</td>
+<td><input type="text" name="class" value="<?php echo $row["class"]?>"></td></tr>
+<tr><td colspan="2"><input type="submit" name="submit"></td></tr></table></form></body></html>
+delete.php
+<?php
+
+include "dbconnection.php"; if ($_GET["did"]) {
+echo $_GET["did"];
+$deletedata = "delete from tbl_student where id='".$_GET["did"]."'"; if($conn->query($deletedata))
+{
+header("location:form.php");
+} else {
+echo "Error deleting record: " . $conn->error;
+}
+}?>
