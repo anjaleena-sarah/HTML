@@ -1,7 +1,7 @@
 Createdatabase.php
 <!-- Create DataBase -->
 <?php
-include 'db.php';
+include 'db.php'; 
 $createdatabase="CREATE DATABASE mydb"; if($conn->query($createdatabase)==TRUE){ echo "Database created successfully";
 }else {
 echo "Error creating database: " . $conn->error;
