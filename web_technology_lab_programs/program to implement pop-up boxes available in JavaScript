@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JavaScript Pop-up Boxes</title>
 <script>
-    function showAlert() {
+    function showAlert() { 
         alert("This is an alert box!");
     }
     function showConfirm() {
