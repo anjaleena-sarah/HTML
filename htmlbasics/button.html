@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Formatting Tags</title>
+    </head>
+
+    <body> 
+        <a href="https://www.google.com">
+        <button style="background-color: pink;color: blueviolet;border-radius: 5px;">click me</button><!--this will take to google site-->
+        <button disabled>click me</button><!-- this will not -->
+        </a>
+
+        <button onclick="doSomething()" style="background-color: pink;color: blueviolet;border-radius: 5px;">click me</button><!--this will take to google site-->
+
+        <p id="test">Hello</p>
+
+        <script>
+            function doSomething(){
+                document.getElementById("test").innerHTML = "Goodbye";
+            }
+        </script>
+    </body>
+</html>
