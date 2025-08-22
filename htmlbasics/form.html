@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Images</title>
+    </head>
+
+    <body>
+        <form action="action_page.php" method="POST"> <!--get is considered insecure-->
+            <!-- post is used to sublit secure informations -->
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="FirstName" required>
+                <br><br>
+            </div>
+
+            <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="LastName">
+            </div>
+
+            <br>
+            <div><label> Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" mazlength="12" required>
+            </div>
+            <br>
+            <div>
+                <label for="lname">Phone:</label>
+                <input type="tel" id="lname" name="lname" placeholder="LastName">
+            </div>
+            <br>
+            <div>
+                <label for="lname">BirthDate:</label>
+                <input type="date" id="lname" name="lname" placeholder="LastName">
+            </div>
+            <br>
+            <div>
+                <label for="lname">Quantity:</label>
+                <input type="number" id="lname" name="lname" placeholder="LastName" min="0" max="99" value="5">
+            </div>
+
+            <div>
+                <label for="Mr.">Mr.</label>
+                <input type="radio" name="title">
+
+                <label for="Ms">Ms.</label>
+                <input type="radio" name="title">
+
+                <label for="Mrs">Mrs.</label>
+                <input type="radio" id="Mrs" name="title" value="Mrs">
+            </div>
+
+            <!-- Drop Down Menu -->
+             <div>
+                <label for="payment">payment:</label>
+                <select name="payment" id="payment">
+                    <option>visa</option>
+                    <option value="mastercard">master card</option>
+                    <option>gist card</option>
+                </select>
+             </div>
+
+             <!-- chechbox -->
+
+             <div>
+                <label for="subscribe">subscribe:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+             </div>
+            <br>
+            <div>
+                <input type="reset">
+            </div>
+
+            <br>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </body>
+</html>
