@@ -1,0 +1,26 @@
+#box1{
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: skyblue;
+
+    position: relative; /*absolute,fixed,relative,static,sticky*/
+
+    /* top: 150px;
+    left: 150px; */
+}
+
+#box2{
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+
+    /* top: 150px;
+    left: 150px; */
+
+    position: absolute;
+
+    top:100px;
+    left: 100px;
+}
