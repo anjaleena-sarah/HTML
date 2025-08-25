@@ -1,0 +1,42 @@
+
+  body{
+    background-color: rgb(255, 219, 219);
+ }
+
+ h1{
+    color: rgb(5, 21, 35);
+    font-family: "Press Start 2p", "consolas","sans-serif";
+}
+
+ p{
+    background-color: aqua;
+    color: white;
+    /* we can list more than 1 font in the font family , this is used bcoz if some browser doesnt support one font the other font can be used*/
+    /* use Google Fonts for diff fonts */
+    font-family: "consolas",sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    /* text-decoration: wavy underline; */
+    text-decoration: red dotted underline;
+    font-size: 18px;
+}
+
+/* targeting id="p1" color of p tag for that we use #p*/
+/* #p1{
+    color:tomato ;
+}
+#p2{
+    color:rgb(86, 71, 255) ;
+}
+#p3{
+    color:purple ;
+} */
+
+/* to target elements by class we use . dot */
+.odd{
+    color: rgb(0, 13, 255);
+}
+.even{
+    color: red;
+}
+    
