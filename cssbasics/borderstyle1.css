@@ -1,0 +1,16 @@
+h1{
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: double;
+    border-left-width: 10px;
+    border-left-color: silver;
+    
+}
+p{
+ /* borders to html elements */
+    border-style:solid; /*dashed, dotted, double, riged, groove, inset, outset*/
+    border-width: 5px;
+    border-color: gold;
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -1,0 +1,19 @@
+body{
+    background-image:url("wallpaper.jpg");
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
+h1{
+    background: linear-gradient(skyblue, lightgreen,white);
+    background-repeat: no repeat; 
+    background-attachment: fixed;
+}
+
+p{
+    background: linear-gradient(skyblue, lightgreen,white);
+    background-repeat: no repeat;
+    background-attachment: fixed;
+}
