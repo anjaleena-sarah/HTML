@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+}
+#box1{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: greenyellow;
+
+    /* margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px; 
+    
+    or the below
+    
+    margin: 50px;
+    */
+
+    /* margin-left: 50%; or*/
+    margin-left: auto;
+    
+
+}
+#box2{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: rgb(221, 255, 0);
+
+    /* margin: 50px; */
+    margin-right: auto;
+
+}
